@@ -23,4 +23,10 @@
 <li>Then run ./QtPong
 
 <h4>3: just run the included executable (QtPong).</h4>
-(Linux only)
+Linux only
+<p>
+  <img src="https://raw.githubusercontent.com/atki7828/QtPong/master/scrn1.png">
+</p>
+<p>
+  <img src="https://raw.githubusercontent.com/atki7828/QtPong/master/scrn2.png">
+</p>
