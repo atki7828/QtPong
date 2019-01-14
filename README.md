@@ -23,4 +23,4 @@
 <li>Then run ./QtPong
 
 <h4>3: just run the included executable (QtPong).</h4>
-<br>(Linux only)
+(Linux only)
