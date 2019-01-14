@@ -17,16 +17,15 @@ int aiScore = 0;
 std::vector<Score*> scores;
 
 float pi = 3.14159;
-int speedInit = 10;
 
 Ball::Ball() {
-    speed = speedInit;
+    speed = 8;
     setRect(0, 0, ballSize, ballSize);
     setBrush(ballColor);
     setPos(scnWidth/2-ballSize/2,scnHeight/2-ballSize/2);
     angle = setAngle();
-    xComponent = speedInit * cos(angle);
-    yComponent = speedInit * sin(angle);
+    xComponent = speed * cos(angle);
+    yComponent = speed * sin(angle);
 
     QTimer *timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
@@ -37,9 +36,6 @@ Ball::Ball() {
 void Ball::move() {
     if(!pause && !stop) {
         srand(time(0));
-        xComponent = speed*cos(angle);
-        yComponent = speed*sin(angle);
-
         setPos(x()+xComponent,y()+yComponent);
 
         // increase speed and reverse direction when hit paddle.
@@ -47,17 +43,18 @@ void Ball::move() {
         // (when it hits bottom edge)
         // upon collision, move ball x position away from paddle towards center.
         if(this->collidesWithItem(p1) || this->collidesWithItem(p2)) {
-            angle = pi - angle;
+            xComponent = -xComponent;
             if(x() < scnWidth/2)
                 setPos(margin+pWidth,y());
             else
                 setPos(scnWidth-margin-pWidth-ballSize,y());
+            xComponent *= 1.05;
+            yComponent *= 1.03;
 
-            speed++;
         }
         // bounce off walls:
         if(this->y() < margin || this->y() > scnHeight-this->rect().height() - margin) {
-            angle = 2*pi - angle;
+            yComponent = -yComponent;
         }
 
 
@@ -77,7 +74,8 @@ void Ball::move() {
                 scores.push_back(score);
             }
             angle = setAngle();
-            speed = speedInit;
+            xComponent = speed*cos(angle);
+            yComponent = speed*sin(angle);
             stop = 1;
             setPos(scnWidth/2-ballSize/2,scnHeight/2-ballSize/2);
             if(aiScore == winScore || myScore == winScore) {

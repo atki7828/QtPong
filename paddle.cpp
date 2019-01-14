@@ -26,7 +26,7 @@ Paddle::Paddle(int player) {
 }
 
 void Paddle::move() {
-    if(!pause && !stop) {
+    if(!pause) {
         if(this->dir > 0 && this->y() > margin) {
             setPos(x(),y()-speed);
         }
