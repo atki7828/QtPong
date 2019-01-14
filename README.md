@@ -4,7 +4,7 @@
 <p>use up and down arrow keys to control the left paddle, and the space bar to pause.</p>
 
 <h3>Instructions for installation</h3>
-<p>Download repository, either by typing <i>'git clone https://github.com/atki7828/QtPong.git'</i> into terminal, or by <a href="https://github.com/atki7828/QtPong/archive/master.zip">downloading zip</a>.</p>
+<p>Download repository, either by typing <b>'git clone https://github.com/atki7828/QtPong.git'</b> into terminal, or by <a href="https://github.com/atki7828/QtPong/archive/master.zip">downloading zip</a>.</p>
 <p>you may need to install git first:
 <br> Ubuntu:  sudo apt install git
 <br> Arch:  sudo pacman -S git,
