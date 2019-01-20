@@ -22,7 +22,8 @@
 <li>from QtPong directory, type 'make'.
 <li>Then run ./QtPong
 
-<h4>3: just run the included executable (QtPong).</h4>Linux only
+<h4>3: just run the included executable (./QtPong). (Linux only)</h4>
+<h3>Screenshots</h3>
 <p>
   <img src="https://raw.githubusercontent.com/atki7828/QtPong/master/scrn1.png">
 </p>
