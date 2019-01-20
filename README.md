@@ -23,6 +23,13 @@
 <li>Then run ./QtPong
 
 <h4>3: just run the included executable (./QtPong). (Linux only)</h4>
+
+<h3>Gameplay</h3>
+<p>Use up and down arrow keys to control the left paddle.
+<br>pressing space will start the game, and pause and show instructions.
+<br>Score is shown in the top corners.
+<br>First to seven points wins.</p>
+
 <h3>Screenshots</h3>
 <p>
   <img src="https://raw.githubusercontent.com/atki7828/QtPong/master/scrn1.png">
