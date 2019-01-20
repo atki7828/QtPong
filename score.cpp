@@ -7,10 +7,10 @@ Score::Score(int score, int player)
 
     if(player == 1) {
         setBrush(leftColor);
-        setPos(margin*2+pWidth+score*rect().width()+score*margin/2,margin);
+        setPos(margin*2+pWidth+score*rect().width()+score*margin/2,margin*1.5);
     }
     else if(player == 2) {
         setBrush(rightColor);
-        setPos(scnWidth-(margin*2+pWidth+score*rect().width()+score*margin/2)-scoreSize,margin);
+        setPos(scnWidth-(margin*2+pWidth+score*rect().width()+score*margin/2)-scoreSize,margin*1.5);
     }
 }

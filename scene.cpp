@@ -19,18 +19,21 @@ Scene::Scene()
     win->setGeometry(scnWidth/2-scnWidth*0.1,scnHeight/3-scnHeight*0.1,scnWidth*0.2,scnHeight*0.2);
     win->setStyleSheet("background:#aa888888;color:#000000;");
     win->setAlignment(Qt::AlignCenter);
-    win->setText("aeou");
     win->raise();
     addWidget(win);
     win->hide();
 
-    QPen pen = QPen(QColor(255,255,255,200),5,Qt::DashLine);
+    QPen pen = QPen(QColor(255,255,255),5,Qt::DashLine);
     QGraphicsLineItem *centerLine = new QGraphicsLineItem();
     centerLine->setLine(scnWidth/2,margin,scnWidth/2,scnHeight- margin);
     centerLine->setPen(pen);
     centerLine->setZValue(-1);
     addItem(centerLine);
-
+    QGraphicsRectItem *bounds = new QGraphicsRectItem();
+    bounds->setRect(margin,margin,scnWidth-2*margin,scnHeight-2*margin);
+    bounds->setPen(pen);
+    bounds->setZValue(-1);
+    addItem(bounds);
 }
 
 void Scene::keyPressEvent(QKeyEvent *e) {

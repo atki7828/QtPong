@@ -51,7 +51,7 @@ int main(int argc, char **argv) {
     QGraphicsView *view = new QGraphicsView();
     //help menu
     QLabel *help = new QLabel("Press SPACE to begin/pause",view);
-    help->setStyleSheet("background:#22000000;color:#cccccc;");
+    help->setStyleSheet("background:#000000;color:#cccccc;");
     help->setGeometry(scnWidth/2-210/2,scnHeight-21,210,20);
     help->show();
     view->setScene(gameScene);
